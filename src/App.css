@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    display: flex; /* Ensure app is a flex container */
+    flex-direction: column; /* Stack header and feed vertically */
+    align-items: center; /* Center children (header, feed) horizontally */
 }
 
 .header {
@@ -21,7 +24,11 @@
 .feed {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center cards horizontally within feed */
+    justify-content: flex-start; /* Align cards at the top for scrollable feed */
     gap: 20px;
+    width: 100%; /* Feed takes full width of .app (up to 800px) */
+    max-width: 700px; /* Slightly wider than cards for better spacing */
 }
 
 .news-card {
@@ -30,6 +37,9 @@
     padding: 15px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Cards take full width of feed */
+    max-width: 600px; /* Cap card width for readability */
+    text-align: left; /* Keep text left-aligned for readability */
 }
 
 .image {
