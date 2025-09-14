@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaFootballBall } from 'react-icons/fa'; // Icon for football theme
-import './App.css'; // We'll style this next
+import { FaFootballBall } from 'react-icons/fa';
+import './App.css';
 
 function App() {
     const [news, setNews] = useState([]);
@@ -10,7 +10,7 @@ function App() {
 
     // Replace with your actual NewsAPI key
     const API_KEY = 'de9f0daf85f8488998f633f8db9f68da';
-    const API_URL = `https://newsapi.org/v2/everything?q=football&sortBy=publishedAt&apiKey=${API_KEY}`;
+    const API_URL = `https://newsapi.org/v2/everything?q=football+OR+%22European+football%22+OR+UEFA+OR+%22Premier+League%22+OR+%22La+Liga%22+OR+%22Serie+A%22+OR+Bundesliga+OR+Ligue+1&sortBy=publishedAt&apiKey=${API_KEY}`;
 
     useEffect(() => {
         const fetchNews = async () => {
