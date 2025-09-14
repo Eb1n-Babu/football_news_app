@@ -8,8 +8,7 @@ function App() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Replace with your actual NewsAPI key
-    const API_KEY = 'de9f0daf85f8488998f633f8db9f68da';
+    const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
     const API_URL = `https://newsapi.org/v2/everything?q=football+OR+%22European+football%22+OR+UEFA+OR+%22Premier+League%22+OR+%22La+Liga%22+OR+%22Serie+A%22+OR+Bundesliga+OR+Ligue+1&sortBy=publishedAt&apiKey=${API_KEY}`;
 
     useEffect(() => {
